@@ -86,6 +86,9 @@ public class ListaDoblementeEnlazadaTest {
         assertEquals(listaDoblementeEnlazada.obtenerUltimoNodo(),nodo);
     }
 
+    /*
+    Se verifica que sale por consola el mensaje de posición ingresada inválida
+    */
     @Test
     public void posicionInvalidaTest(){
         listaDoblementeEnlazada.agregarNodo(5);
@@ -99,6 +102,9 @@ public class ListaDoblementeEnlazadaTest {
         assertEquals(outputEsperado, outputString);
     }
 
+    /*
+    Se verifica que por consola sale el mensaje de lista vacia
+    */
     @Test
     public void mostrarListaVaciaTest(){
         System.setOut(new PrintStream(outputStreamCaptor));
@@ -109,6 +115,9 @@ public class ListaDoblementeEnlazadaTest {
         assertEquals(outputEsperado, outputString);
     }
 
+    /*
+    Se verifica que por consola salen los nodos en orden
+    */
     @Test
     public void mostrarListaConVariosElementosTest(){
         System.setOut(new PrintStream(outputStreamCaptor));
@@ -121,6 +130,9 @@ public class ListaDoblementeEnlazadaTest {
         assertEquals(outputEsperado, outputString);
     }
 
+    /*
+    Se verifica que por consola salen los nodos en orden invertido
+    */
     @Test
     public void mostrarListaInvertidaTest(){
         System.setOut(new PrintStream(outputStreamCaptor));
@@ -133,6 +145,9 @@ public class ListaDoblementeEnlazadaTest {
         assertEquals(outputEsperado, outputString);
     }
 
+    /*
+    Se verifica que por consola salen los nodos en orden desde la posición ingresada
+     */
     @Test
     public void mostrarListaConVariosElementosDesdePosITest(){
         System.setOut(new PrintStream(outputStreamCaptor));

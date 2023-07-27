@@ -110,6 +110,9 @@ public class ListaDoblementeEnlazada {
         System.out.println(" ");
     }
 
+    /*
+    Se actualiza el nodo seleccionado con el valor ingresado
+    */
     public void actualizarNodo(int posicion, int valorNodo) {
         if (posicion > this.cantidadNodos) mostrarErrorPosicionIngresadaInvalida();
         else {
@@ -123,6 +126,9 @@ public class ListaDoblementeEnlazada {
         }
     }
 
+    /*
+    Se obtiene el nodo de la posición ingresada
+    */
     public NodoListaDoblementeEnlazada obenerNodoI(int posicion) {
         NodoListaDoblementeEnlazada nodo = null;
         if (posicion > this.cantidadNodos) mostrarErrorPosicionIngresadaInvalida();
@@ -138,16 +144,25 @@ public class ListaDoblementeEnlazada {
         return nodo;
     }
 
+    /*
+    Se obtiene primer nodo de la lista
+    */
     public NodoListaDoblementeEnlazada obtenerPrimerNodo() {
         return primerNodo;
     }
 
+    /*
+    Se obtiene ultimo nodo de la lista
+    */
     public NodoListaDoblementeEnlazada obtenerUltimoNodo() {
         return ultimoNodo;
     }
 
     public int getCantidadNodos() {return cantidadNodos;}
 
+    /*
+    Se muestra la lista a partir de la posición ingresada
+    */
     public void mostrarListaDesdePosI(int posicion) {
         NodoListaDoblementeEnlazada nodoActual = this.obenerNodoI(posicion);
         System.out.print("- Nodo " + posicion + " <" + nodoActual.getValorNodo() + "> || ");
